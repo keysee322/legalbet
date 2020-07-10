@@ -89,6 +89,13 @@ a {
   cursor: pointer;
   text-decoration: none;
   color: rgba(0, 0, 0, 0.8);
+  -webkit-transition: linear .2s;
+  -o-transition: linear .2s;
+  transition: linear .2s;
+}
+
+a:hover {
+  color: #d0021b;
 }
 
 header {
