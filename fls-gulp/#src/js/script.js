@@ -33,12 +33,12 @@ var triger = true;
   function mobileMenu() {
       
       if (triger){
-
-
     var x=document.createElement("button");
     x.setAttribute("class","mobile-right");
     x.setAttribute("onclick","mobileMenu()");
     document.body.appendChild(x);
+    
+    if (document.documentElement.clientWidth >= 400)
     animate({
         duration: 2000,
         timing: quadEaseOut,
@@ -48,7 +48,20 @@ var triger = true;
           document.getElementsByClassName("mobile-navigation")[0].style.transform = "rotate(" + progress * 90 + "deg)";
         }
       });
-    } else {
+      else {
+      animate({
+        duration: 2000,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementsByClassName("mobile-menu_left")[0].style.left = -100 + progress * 100 + "vw";
+          document.getElementsByClassName("mobile-right")[0].style.opacity = progress * 1;
+          document.getElementsByClassName("mobile-navigation")[0].style.transform = "rotate(" + progress * 90 + "deg)";
+        }
+      });
+      document.getElementsByClassName("mobile-navigation")[0].style.zIndex = 50;
+    }
+    
+  } else {
         animate({
             duration: 2000,
             timing: quadEaseOut,

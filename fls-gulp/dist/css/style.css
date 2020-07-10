@@ -106,6 +106,14 @@ header nav {
   background: rgba(0, 0, 0, 0);
 }
 
+.mobile-header-name {
+  display: none;
+}
+
+.help-min_container {
+  display: none;
+}
+
 .logo_container {
   width: 112px;
   position: absolute;
@@ -141,6 +149,13 @@ header nav {
   color: rgba(0, 0, 0, 0.4);
   font-size: 14px;
   line-height: 16px;
+}
+
+.right_container .help-button .green_round,
+.right_container .search-button .green_round {
+  position: absolute;
+  margin-top: -4px;
+  margin-left: 5px;
 }
 
 .right_button_container {
@@ -189,6 +204,12 @@ nav li {
   border-radius: 4px;
   display: inline-block;
   vertical-align: top;
+}
+
+.stats-area .not-to-sale {
+  position: absolute;
+  margin-left: 651px;
+  margin-top: -54px;
 }
 
 .stats-area .stats-area_inner {
@@ -445,6 +466,7 @@ form label a {
     vertical-align: top;
     margin-top: 0px;
     text-align: left;
+    margin-left: 53px;
     width: 468px;
     height: 208px;
   }
@@ -463,6 +485,10 @@ form label a {
 
   label {
     margin-top: 17px !important;
+  }
+
+  .not-to-sale {
+    margin-top: -90px !important;
   }
 
   .helpful-block {
@@ -508,7 +534,7 @@ form label a {
     width: auto;
     height: auto;
     border: 0px;
-    top: 10px;
+    top: 11px;
     right: 40px;
   }
 
@@ -519,7 +545,7 @@ form label a {
     left: -400px;
     z-index: 5;
     background: white;
-    height: 100vh;
+    height: 150vh;
   }
 
   .mobile-right {
@@ -538,10 +564,11 @@ form label a {
   }
 
   .mobile-menu_container {
+    z-index: 12;
     position: absolute;
     font-size: 30px;
     line-height: 30px;
-    margin-top: 90px;
+    margin-top: 60px;
     margin-left: 30px;
   }
 
@@ -558,9 +585,14 @@ form label a {
 @media (max-width: 800px) {
   .stats-area {
     position: absolute;
-    width: 100vw;
-    left: 0px;
+    width: 96%;
+    left: 2%;
+    margin-top: 70px;
     margin-left: 0px;
+  }
+
+  .stats-area .arrow {
+    margin-left: 10px !important;
   }
 
   .stats-area .stats-area_inner {
@@ -569,6 +601,11 @@ form label a {
 
   .stats-area .delete-on-phone {
     display: none;
+  }
+
+  .not-to-sale {
+    right: -1px;
+    top: 90px;
   }
 
   h1 {
@@ -620,6 +657,133 @@ form label a {
   }
 
   .logo_container {
-    left: 0px;
+    left: -17px;
+    overflow-x: hidden;
+    width: 30px;
+  }
+
+  .mobile-navigation {
+    right: 5px;
+  }
+
+  .help-min_container {
+    display: block;
+    margin-left: 283px;
+  }
+
+  .help-min {
+    position: absolute;
+    right: 1%;
+    width: 98%;
+    border: 0px;
+    border-style: none;
+    -webkit-box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.06);
+            box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.06);
+    border-radius: 3px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    height: 48px;
+    padding-left: 16px;
+    font-family: ProximaNova;
+  }
+
+  .mobile-header-name {
+    display: block;
+    position: absolute;
+    right: calc(50vw - 40px);
+    top: 20px;
+  }
+
+  .right-block .subscribe-block {
+    top: calc(550px + 7vw);
+    margin-left: 0px;
+    width: 96% !important;
+    left: calc(50% - 48%);
+  }
+
+  .right-block .subscribe-block input,
+  .right-block .subscribe-block button {
+    width: 100%;
+  }
+
+  .right-block .subscribe-block .accept_checkbox {
+    width: 12px;
+  }
+
+  .right-block .subscribe-block label {
+    margin-top: 15px !important;
+  }
+
+  .right-block .subscribe-block p {
+    width: 50vw;
+  }
+
+  .right-block .subscribe-block img {
+    margin-top: 31px;
+    right: 7vw;
+  }
+}
+
+@media (max-width: 400px) {
+  .stats-area {
+    padding-left: 15px;
+    width: 96%;
+  }
+
+  .stats-area img {
+    -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+
+  .stats-area_inner_body_container {
+    margin-left: -9px;
+    padding-left: 12px !important;
+    width: 78px !important;
+  }
+
+  .stats-area_inner_body_right_container {
+    right: 3vw !important;
+  }
+
+  .stats-area_inner_body_container.marge {
+    margin-right: 3vw !important;
+  }
+
+  .stats-area_inner_body_container.marge img {
+    margin-left: 6px;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  .right-block .subscribe-block {
+    top: 568px;
+    margin-left: 0px;
+    width: 96% !important;
+    left: calc(50% - 48%);
+  }
+
+  .right-block .subscribe-block input,
+  .right-block .subscribe-block button {
+    width: 100%;
+  }
+
+  .right-block .subscribe-block .accept_checkbox {
+    width: 12px;
+  }
+
+  .right-block .subscribe-block label {
+    margin-top: 15px !important;
+  }
+
+  .right-block .subscribe-block p {
+    width: 222px;
+  }
+
+  .right-block .subscribe-block img {
+    margin-top: 31px;
+    right: 7vw;
   }
 }
