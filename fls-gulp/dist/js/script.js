@@ -54,6 +54,7 @@ var triger = true;
         timing: quadEaseOut,
         draw: function(progress) {
           document.getElementsByClassName("mobile-menu_left")[0].style.left = -100 + progress * 100 + "vw";
+          document.getElementsByClassName("mobile-right")[0].style.opacity = progress * 1;
           document.getElementsByClassName("mobile-navigation")[0].style.transform = "rotate(" + progress * 90 + "deg)";
         }
       });
